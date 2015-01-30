@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week Calculator </title>
+</head>
+<body>
+	<input type="text" id="yearNow" value="2014"/>
+</body>
+<script>
+	// get Week starting Date and Ending Date for given Year. Week Starting Day Mon - Ending Day Sun
+	var inputYear = document.getElementById('yearNow').value;
+	var currdate = new Date();
+	var gotdate = new Date(inputYear,currdate.getMonth(),currdate.getDate());
+	startDay=currdate.getDate()-gotdate.getDay();
+	lastDay=startDay+6;
+	var ss= new Date(inputYear,currdate.getMonth(),startDay+1);
+	var tt=new Date(inputYear,currdate.getMonth(),lastDay+1);
+	console.log(ss);
+	console.log(tt);
+	// Ends of Week calculation
+</script>
+</html>
