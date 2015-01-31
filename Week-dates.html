@@ -12,6 +12,9 @@
 	var currdate = new Date();
 	var gotdate = new Date(inputYear,currdate.getMonth(),currdate.getDate());
 	startDay=currdate.getDate()-gotdate.getDay();
+	var od= new Date(inputYear,currdate.getMonth(),currdate.getDate());
+	id=od.getDay();
+	if(id==0){startDay=od.getDate()-6;}
 	lastDay=startDay+6;
 	var ss= new Date(inputYear,currdate.getMonth(),startDay+1);
 	var tt=new Date(inputYear,currdate.getMonth(),lastDay+1);
